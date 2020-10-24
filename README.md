@@ -28,30 +28,32 @@ Data Set: https://drive.google.com/drive/folders/1hyz5WwE7nwlDZDRxI4uljkDwhx6DvV
 
 	CNN:
 
-	 train_loss: 0.0425
-	 train_accuracy: 0.9930
-	 val_loss: 0.2438
-	 val_accuracy: 0.9294
-	 
-	 with CNN we are able to get better and more robust results than training with LSTMs but validation loss is still more.
+	  train_loss: 0.0425
+	  train_accuracy: 0.9930
+	  val_loss: 0.2438
+	  val_accuracy: 0.9294
+
+	  with CNN we are able to get better and more robust results than training with LSTMs but validation loss is still more.
 
 	BERT:
 
-	 train_loss: 0.06
-	 train_accuracy: 0.99
-	 validation_loss = 0.14
-	 validation_accuracy: 0.97
-	 Here we can see that fine-tuned BertForSequenceClassification model is the best performer among all other classifiers.
-	 This model is more robust as we are fine-tuning the pretrained BertForSequenceClassification model on our dataset.
-	 Hence results with BertForSequenceClassification model are more robust and loss function values are now acceptable.
+	  train_loss: 0.06
+	  train_accuracy: 0.99
+	  validation_loss = 0.14
+	  validation_accuracy: 0.97
+		
+	  Here we can see that fine-tuned BertForSequenceClassification model is the best performer among all other classifiers.
+	  This model is more robust as we are fine-tuning the pretrained BertForSequenceClassification model on our dataset.
+	  Hence results with BertForSequenceClassification model are more robust and loss function values are now acceptable.
 	 
-- Model Tuning techniques used to give best results
+- Model Tuning techniques used to give best results:
 	Note: Choosing a good Learning rate and good optimizer is the most important part of the model training, 
 		  if we have optimize only parameter then I would certainly choose learning rate.
-	1.Tried out SGD, Adam optimizer with various values of beta1, beta2  and momentum to reduce the noise in the loss function values graph
-    2.Tried out various values of learning rate to get the optimal performance of loss function
-	3.Tried learning rate scheduler for to fine tune BERT model
-	4.Tried values number of neurons/layers to get the optimal perfomance of the model
-	5.Performed various experiments with drop_out rate to overcome overfitting
+		  
+	1. Tried out SGD, Adam optimizer with various values of beta1, beta2  and momentum to reduce the noise in the loss function values graph
+    2. Tried out various values of learning rate to get the optimal performance of loss function
+	3. Tried learning rate scheduler for to fine tune BERT model
+	4. Tried values number of neurons/layers to get the optimal perfomance of the model
+	5. Performed various experiments with drop_out rate to overcome overfitting
 
 
